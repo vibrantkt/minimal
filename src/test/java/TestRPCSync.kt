@@ -19,10 +19,13 @@ class TestRPCSync {
                 MyBlock(1, "My hash lol", Chain.genesis.hash)
         )
 
+        // connect
         node1.connect(RemoteNode("localhost", node2.peer.port))
+        // sync chains: node1 is ahead.
         node1.sync(RemoteNode("localhost", node2.peer.port))
 
 
+        //we expect chains to be equal cause we have implemented JSONRPCBlockChainSynchronization
         assertEquals(
                 node1.chain.produce(serializerFor<BlockChainModel>()),
                 node2.chain.produce(serializerFor<BlockChainModel>())

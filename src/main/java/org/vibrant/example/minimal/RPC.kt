@@ -11,6 +11,10 @@ import org.vibrant.core.rpc.json.JSONRPCBlockChainSynchronization
 import org.vibrant.core.serialization.ConcreteModelSerializer
 import java.util.*
 
+/**
+ * That's a mess, but it is only logic is present. You can agree it's not that much of code for full working network node.
+ * <3
+ */
 class RPC(override val node: Node) : JSONRPC(),
         JSONRPCBlockChainSynchronization<Peer, MyBlock, HashedTransactionModel, org.vibrant.example.minimal.BlockChainModel> {
 

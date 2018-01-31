@@ -4,6 +4,9 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import org.vibrant.core.models.Model
 import org.vibrant.core.serialization.ConcreteModelSerializer
 
+/**
+ * Simple function to create instance of serializer/deserializer.
+ */
 inline fun <reified T: Model> serializerFor(): ConcreteModelSerializer<T> {
     return object: ConcreteModelSerializer<T>(){
 
