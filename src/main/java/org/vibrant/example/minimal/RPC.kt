@@ -21,7 +21,7 @@ class RPC(override val node: Node) : JSONRPC(),
     override val transactionSerializer: ConcreteModelSerializer<HashedTransactionModel> = serializerFor()
 
     override fun handleDistinctTransaction(transaction: HashedTransactionModel) {
-        logger.info { "Hehe $transaction" }
+        TODO("Maybe some proof of work")
     }
 
 
