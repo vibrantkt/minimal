@@ -29,7 +29,7 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
-    compile 'com.github.vibrantkt:core:dev-SNAPSHOT'
+    compile 'com.github.vibrantkt:core:0.3.2'
 
     compile 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.2'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.0'
@@ -48,4 +48,10 @@ kotlin {
     experimental {
         coroutines "enable"
     }
+}
+
+
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
